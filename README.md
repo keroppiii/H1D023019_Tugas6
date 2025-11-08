@@ -79,7 +79,7 @@ Text('Nama saya $nama, NIM $nim, dan umur saya $umur tahun.')
 
 ---
 
-### 📸 Tampilan Aplikasi
+### Tampilan Aplikasi
 | Form                     | Tampilan                        | Gif                     |
 |--------------------------|-------------------------------- |-------------------------|
 | ![Form](assets/form.jpg) | ![Tampilan](assets/tampilan.jpg)| ![Gif](assets/demo.gif) |
