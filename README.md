@@ -1,8 +1,8 @@
 ##  Tugas 6 Flutter - Form dan Tampil Data Mahasiswa
 
-**Nama:** Fatimah Nurmawati
-**NIM:** H1D023019
-**Shift:** C
+### Nama : Fatimah Nurmawati
+### NIM : H1D023019
+### Shift: C
 
 ---
 
