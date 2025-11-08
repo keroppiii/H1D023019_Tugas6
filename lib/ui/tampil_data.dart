@@ -29,14 +29,14 @@ class TampilDataPage extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: const Text('Perkenalan'),
-        backgroundColor: const Color(0xFF7E57C2), // ungu tua
+        backgroundColor: const Color(0xFF7E57C2), 
         elevation: 4,
       ),
       body: Container(
         width: double.infinity,
         decoration: const BoxDecoration(
           gradient: LinearGradient(
-            colors: [Color(0xFFF3E5F5), Color(0xFFD1C4E9)], // gradasi ungu lembut
+            colors: [Color(0xFFF3E5F5), Color(0xFFD1C4E9)], 
             begin: Alignment.topCenter,
             end: Alignment.bottomCenter,
           ),

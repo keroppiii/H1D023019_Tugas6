@@ -20,7 +20,7 @@ class _FormDataPageState extends State<FormDataPage> {
     return Scaffold(
       appBar: AppBar(
         title: const Text('Input Data'),
-        backgroundColor: const Color(0xFF7E57C2), // ungu tua
+        backgroundColor: const Color(0xFF7E57C2), 
         elevation: 4,
       ),
       body: Container(
