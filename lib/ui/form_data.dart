@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'tampil_data.dart';
 
 class FormDataPage extends StatefulWidget {
-  const FormDataPage({Key? key}) : super(key: key);
+  const FormDataPage({super.key});
 
   @override
   State<FormDataPage> createState() => _FormDataPageState();

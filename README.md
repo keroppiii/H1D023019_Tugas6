@@ -1,16 +1,85 @@
-# h1d023019_tugas6
+##  Tugas 6 Flutter - Form dan Tampil Data Mahasiswa
 
-A new Flutter project.
+**Nama:** Fatimah Nurmawati
+**NIM:** H1D023019
+**Shift:** C
 
-## Getting Started
+---
 
-This project is a starting point for a Flutter application.
+### Deskripsi Aplikasi
 
-A few resources to get you started if this is your first Flutter project:
+Dibuat menggunakan **Flutter** dengan tujuan untuk:
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+* Menampilkan **form input data mahasiswa** (Nama, NIM, dan Tahun Lahir).
+* Menampilkan hasil input dalam bentuk **kalimat perkenalan** di halaman selanjutnya.
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+Aplikasi terdiri dari dua halaman utama:
+
+* **`FormDataPage` (`ui/form_data.dart`)**: Halaman pengisian data mahasiswa.
+* **`TampilDataPage` (`ui/tampil_data.dart`)**: Halaman menampilkan hasil input data dengan tampilan menarik.
+
+---
+
+### Proses Passing Data
+
+Proses mengirimkan data dari satu halaman ke halaman lain di Flutter.
+Pada aplikasi ini, data dikirim dari `FormDataPage` ke `TampilDataPage`.
+
+#### Langkah-langkah
+
+##### 1. Input Data di Form
+
+Pengguna mengisi 3 `TextFormField`:
+
+```dart
+TextFormField(
+  controller: _nameController,
+  decoration: InputDecoration(labelText: 'Nama'),
+),
+TextFormField(
+  controller: _nimController,
+  decoration: InputDecoration(labelText: 'NIM'),
+),
+TextFormField(
+  controller: _tahunController,
+  decoration: InputDecoration(labelText: 'Tahun Lahir'),
+),
+```
+
+##### 2. Tombol Simpan dan Navigasi
+Saat tombol Simpan ditekan, aplikasi akan mengambil data dari form dan mengirimkannya ke halaman TampilDataPage menggunakan Navigator.push:
+```dart
+ElevatedButton(
+  onPressed: () {
+    String nama = _nameController.text;
+    String nim = _nimController.text;
+    int tahun = int.parse(_tahunController.text);
+    int umur = DateTime.now().year - tahun;
+
+    Navigator.push(
+      context,
+      MaterialPageRoute(
+        builder: (context) => TampilDataPage(
+          nama: nama,
+          nim: nim,
+          umur: umur,
+        ),
+      ),
+    );
+  },
+  child: const Text('Simpan'),
+),
+```
+
+##### 3. Menampilkan Data di Halaman Kedua
+Pada halaman TampilDataPage, data diterima melalui konstruktor dan ditampilkan dalam bentuk kalimat perkenalan menggunakan widget Text:
+```dart
+Text('Nama saya $nama, NIM $nim, dan umur saya $umur tahun.')
+```
+
+---
+
+### 📸 Tampilan Aplikasi
+| Form                     | Tampilan                        | Gif                     |
+|--------------------------|-------------------------------- |-------------------------|
+| ![Form](assets/form.jpg) | ![Tampilan](assets/tampilan.jpg)| ![Gif](assets/demo.gif) |

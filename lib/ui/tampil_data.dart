@@ -6,11 +6,11 @@ class TampilDataPage extends StatelessWidget {
   final String tahun;
 
   const TampilDataPage({
-    Key? key,
+    super.key,
     required this.name,
     required this.nim,
     required this.tahun,
-  }) : super(key: key);
+  });
 
   int hitungUmur(String tahunLahir) {
     try {
